@@ -313,6 +313,7 @@ typedef struct _rfbScreenInfo
 #if defined(LIBVNCSERVER_HAVE_LIBPTHREAD) || defined(LIBVNCSERVER_HAVE_WIN32THREADS)
     MUTEX(cursorMutex);
     rfbBool backgroundLoop;
+    rfbBool serverStopping;
 #endif
 
     /** if TRUE, an ignoring signal handler is installed for SIGPIPE */
